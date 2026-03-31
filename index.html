@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Awen Tech — Software Solutions</title>
+  <meta name="description" content="Consultora de software a medida para PYMEs argentinas. Convertimos tus procesos en sistemas que realmente funcionan." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- reCAPTCHA -->
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" type="image/png" href="Logo AwenTech - Sin fondo.png" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════════
+       NAV
+  ═══════════════════════════════════════════════ -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">
+        <img src="Logo AwenTech - Sin fondo.png" alt="Awen Tech" />
+      </a>
+      <ul class="nav-links">
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#proceso">Cómo trabajamos</a></li>
+        <li><a href="#casos">Casos de éxito</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+      </ul>
+      <a href="#contacto" class="btn btn-nav">Hablemos del proyecto</a>
+      <button class="nav-burger" id="navBurger" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav-mobile" id="navMobile">
+      <a href="#servicios">Servicios</a>
+      <a href="#proceso">Cómo trabajamos</a>
+      <a href="#casos">Casos de éxito</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#contacto" class="btn btn-nav">Hablemos del proyecto</a>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════════════════════
+       HERO — SECCIÓN 1
+  ═══════════════════════════════════════════════ -->
+  <section id="hero">
+    <div class="hero-bg-glow glow-1"></div>
+    <div class="hero-bg-glow glow-2"></div>
+    <div class="hero-bg-glow glow-3"></div>
+
+    <div class="hero-content">
+      <span class="hero-eyebrow">Consultora de Software · Argentina</span>
+      <h1 class="hero-title">
+        Tu empresa merece<br />
+        <span class="highlight">software que realmente funcione</span>
+      </h1>
+      <p class="hero-sub">
+        Trabajamos con PYMEs que quieren digitalizar sus procesos, automatizar tareas o construir
+        un producto propio — sin depender de un equipo técnico interno.
+      </p>
+      <div class="hero-ctas">
+        <a href="#contacto" class="btn btn-primary">Contanos tu proyecto</a>
+        <a href="#casos" class="btn btn-ghost">Ver casos de éxito</a>
+      </div>
+    </div>
+
+    <div class="hero-card-wrap">
+      <div class="hero-float-card glass-card">
+        <div class="fc-header">
+          <span class="fc-dot green"></span>
+          <span class="fc-dot yellow"></span>
+          <span class="fc-dot red"></span>
+          <span class="fc-title">proyecto_en_curso.js</span>
+        </div>
+        <div class="fc-body">
+          <p class="fc-line"><span class="fc-key">cliente</span>  <span class="fc-val">"Empresa Logística SA"</span></p>
+          <p class="fc-line"><span class="fc-key">estado</span>   <span class="fc-val fc-green">"En producción ✓"</span></p>
+          <p class="fc-line"><span class="fc-key">impacto</span>  <span class="fc-val">"40% menos errores"</span></p>
+          <p class="fc-line"><span class="fc-key">entrega</span>  <span class="fc-val fc-blue">"En tiempo y forma"</span></p>
+        </div>
+        <div class="fc-footer">
+          <span class="fc-badge">
+            <i class="fa-solid fa-circle-check"></i> Build exitoso
+          </span>
+        </div>
+      </div>
+
+      <div class="hero-float-card glass-card card-secondary">
+        <p class="card-sec-label">Stack tecnológico</p>
+        <div class="stack-pills">
+          <span>Java</span><span>Spring Boot</span><span>React</span>
+          <span>Angular</span><span>Python</span><span>Node.js</span>
+          <span>IA Agents</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       BARRA DE CONFIANZA — SECCIÓN 2
+  ═══════════════════════════════════════════════ -->
+  <section id="confianza">
+    <div class="confianza-inner">
+      <div class="metric">
+        <span class="metric-num" data-target="10">0</span><span class="metric-sym">+</span>
+        <span class="metric-label">Proyectos entregados</span>
+      </div>
+      <div class="metric-divider"></div>
+      <div class="metric">
+        <span class="metric-num" data-target="100">0</span><span class="metric-sym">%</span>
+        <span class="metric-label">Entregas en tiempo y forma</span>
+      </div>
+      <div class="metric-divider"></div>
+      <div class="metric">
+        <span class="metric-num" data-target="48">0</span><span class="metric-sym">hs</span>
+        <span class="metric-label">Tiempo de respuesta máximo</span>
+      </div>
+      <div class="metric-divider"></div>
+      <div class="metric">
+        <span class="metric-num" data-target="2">0</span><span class="metric-sym"></span>
+        <span class="metric-label">Founders técnicas · trato directo</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       SERVICIOS — SECCIÓN 3
+  ═══════════════════════════════════════════════ -->
+  <section id="servicios">
+    <div class="section-inner">
+      <span class="section-eyebrow">Lo que hacemos</span>
+      <h2 class="section-title">Dos formas de trabajar<br />con Awen Tech</h2>
+      <p class="section-sub">
+        Somos una consultora con productos propios. Esto nos da algo que la mayoría no tiene:
+        sabemos tanto construir desde cero como adaptar soluciones ya probadas.
+      </p>
+
+      <div class="services-grid">
+
+        <!-- Card 1 -->
+        <div class="service-card glass-card">
+          <div class="sc-icon-wrap">
+            <i class="fa-solid fa-code"></i>
+          </div>
+          <h3>Desarrollo a medida</h3>
+          <p>
+            Te construimos el sistema exacto que necesitás — desde un portal web hasta
+            un sistema de gestión completo. Sin plantillas genéricas, sin features que no pediste.
+          </p>
+          <ul class="sc-list">
+            <li><i class="fa-solid fa-check"></i> Sistemas de gestión interna</li>
+            <li><i class="fa-solid fa-check"></i> Automatización de procesos</li>
+            <li><i class="fa-solid fa-check"></i> Aplicaciones web y móviles</li>
+            <li><i class="fa-solid fa-check"></i> Agentes de IA para tu operación</li>
+            <li><i class="fa-solid fa-check"></i> Integraciones entre sistemas</li>
+          </ul>
+          <a href="#contacto" class="btn btn-outline">Hablar de mi proyecto</a>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="service-card glass-card card-featured">
+          <div class="sc-badge-featured">Producto propio</div>
+          <div class="sc-icon-wrap">
+            <i class="fa-solid fa-box-open"></i>
+          </div>
+          <h3>Soluciones ya construidas</h3>
+          <p>
+            Tenemos productos propios listos para implementar y adaptar. Menos tiempo,
+            menos costo inicial, y la misma calidad técnica que el desarrollo a medida.
+          </p>
+          <ul class="sc-list">
+            <li><i class="fa-solid fa-check"></i> Sistema para kioscos y comercios</li>
+            <li><i class="fa-solid fa-check"></i> Sistema de logística y entregas</li>
+            <li><i class="fa-solid fa-check"></i> Gestión para gimnasios y clubes</li>
+            <li><i class="fa-solid fa-check"></i> Agente de IA contable</li>
+            <li><i class="fa-solid fa-check"></i> Adaptable a tu rubro</li>
+          </ul>
+          <a href="#contacto" class="btn btn-primary">Conocer productos</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       PROCESO — SECCIÓN 4
+  ═══════════════════════════════════════════════ -->
+  <section id="proceso">
+    <div class="proceso-bg-glow"></div>
+    <div class="section-inner">
+      <span class="section-eyebrow">Cómo trabajamos</span>
+      <h2 class="section-title">Un proceso claro,<br />sin sorpresas</h2>
+      <p class="section-sub">
+        Sabemos que contratar un equipo externo genera incertidumbre. Por eso cada etapa
+        es visible, documentada y con vos como protagonista.
+      </p>
+
+      <div class="proceso-steps">
+        <div class="step">
+          <div class="step-num">01</div>
+          <div class="step-content">
+            <h4>Discovery</h4>
+            <p>Entendemos tu negocio, tus procesos y qué problema concreto querés resolver. Una charla sin compromiso.</p>
+          </div>
+          <div class="step-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+        </div>
+        <div class="step">
+          <div class="step-num">02</div>
+          <div class="step-content">
+            <h4>Propuesta</h4>
+            <p>Te presentamos un plan claro: alcance, tecnología, tiempos y presupuesto. Sin letra chica.</p>
+          </div>
+          <div class="step-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+        </div>
+        <div class="step">
+          <div class="step-num">03</div>
+          <div class="step-content">
+            <h4>Build</h4>
+            <p>Desarrollamos con actualizaciones periódicas. Ves el avance en tiempo real, no solo al final.</p>
+          </div>
+          <div class="step-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+        </div>
+        <div class="step">
+          <div class="step-num">04</div>
+          <div class="step-content">
+            <h4>Entrega y soporte</h4>
+            <p>Lanzamos, capacitamos a tu equipo y quedamos disponibles. El proyecto no termina en la entrega.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="proceso-highlight glass-card">
+        <div class="ph-icon"><i class="fa-solid fa-shield-halved"></i></div>
+        <div class="ph-text">
+          <h4>¿Sin equipo técnico propio? Sin problema.</h4>
+          <p>
+            Hablás directo con Lara y Teo — las founders — en cada etapa del proyecto.
+            No hay account managers, no hay intermediarios, no perdés nada en la traducción.
+            Nosotras entendemos tu negocio y escribimos el código.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       CASOS DE ÉXITO — SECCIÓN 5
+  ═══════════════════════════════════════════════ -->
+  <section id="casos">
+    <div class="section-inner">
+      <span class="section-eyebrow">Portfolio</span>
+      <h2 class="section-title">Proyectos que ya<br />están funcionando</h2>
+      <p class="section-sub">
+        Cada caso es un problema real resuelto. Estos son algunos de los sistemas
+        que diseñamos, construimos y pusimos en producción.
+      </p>
+
+      <div class="casos-grid">
+
+        <div class="caso-card glass-card">
+          <div class="caso-tag">Comercio</div>
+          <h3>Sistema para kioscos</h3>
+          <div class="caso-row">
+            <div class="caso-block">
+              <span class="caso-label">Problema</span>
+              <p>Control de inventario manual, errores en caja y sin visibilidad de ventas en tiempo real.</p>
+            </div>
+            <div class="caso-block">
+              <span class="caso-label">Solución</span>
+              <p>Sistema de gestión con punto de venta, control de stock y reportes automáticos.</p>
+            </div>
+          </div>
+          <div class="caso-result">
+            <i class="fa-solid fa-chart-line"></i>
+            <span>60% menos tiempo en cierre de caja diario</span>
+          </div>
+        </div>
+
+        <div class="caso-card glass-card">
+          <div class="caso-tag">Logística</div>
+          <h3>Sistema de logística</h3>
+          <div class="caso-row">
+            <div class="caso-block">
+              <span class="caso-label">Problema</span>
+              <p>Rutas desorganizadas, pedidos perdidos y falta de trazabilidad de entregas.</p>
+            </div>
+            <div class="caso-block">
+              <span class="caso-label">Solución</span>
+              <p>Plataforma de seguimiento de pedidos en tiempo real con asignación automática de rutas.</p>
+            </div>
+          </div>
+          <div class="caso-result">
+            <i class="fa-solid fa-chart-line"></i>
+            <span>40% menos errores en entregas</span>
+          </div>
+        </div>
+
+        <div class="caso-card glass-card">
+          <div class="caso-tag">Salud &amp; Fitness</div>
+          <h3>Sistema de gimnasio</h3>
+          <div class="caso-row">
+            <div class="caso-block">
+              <span class="caso-label">Problema</span>
+              <p>Gestión de socios en planillas Excel, cobros sin seguimiento y alta tasa de deserción.</p>
+            </div>
+            <div class="caso-block">
+              <span class="caso-label">Solución</span>
+              <p>Sistema de gestión de socios, cobros automáticos y alertas de vencimiento.</p>
+            </div>
+          </div>
+          <div class="caso-result">
+            <i class="fa-solid fa-chart-line"></i>
+            <span>30% de reducción en deserción de socios</span>
+          </div>
+        </div>
+
+        <div class="caso-card glass-card caso-featured">
+          <div class="caso-tag tag-ai">Inteligencia Artificial</div>
+          <h3>Agente de IA para contadores</h3>
+          <div class="caso-row">
+            <div class="caso-block">
+              <span class="caso-label">Problema</span>
+              <p>Horas perdidas en clasificación manual de comprobantes y preparación de informes contables.</p>
+            </div>
+            <div class="caso-block">
+              <span class="caso-label">Solución</span>
+              <p>Agente de IA que procesa, clasifica y genera reportes contables de forma autónoma.</p>
+            </div>
+          </div>
+          <div class="caso-result">
+            <i class="fa-solid fa-chart-line"></i>
+            <span>70% menos tiempo en tareas administrativas</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       NOSOTROS — SECCIÓN 6
+  ═══════════════════════════════════════════════ -->
+  <section id="nosotros">
+    <div class="nosotros-bg-glow"></div>
+    <div class="section-inner">
+      <span class="section-eyebrow">El equipo</span>
+      <h2 class="section-title">Construido por dos personas<br />que viven del código</h2>
+      <p class="section-sub">
+        Awen Tech no es una agencia con decenas de empleados. Somos Lara y Teo —
+        dos desarrolladoras que fundamos esto porque queríamos hacer software con propósito real.
+      </p>
+
+      <div class="diferencial-grid">
+        <div class="dif-card glass-card">
+          <div class="dif-icon"><i class="fa-solid fa-handshake"></i></div>
+          <h4>Trato directo con quien hace el trabajo</h4>
+          <p>Cuando hablás con nosotras, hablás con las que van a escribir tu código. No hay intermediarios.</p>
+        </div>
+        <div class="dif-card glass-card">
+          <div class="dif-icon"><i class="fa-solid fa-bolt"></i></div>
+          <h4>Velocidad de una consultora pequeña</h4>
+          <p>Sin burocracia interna. Las decisiones son rápidas, los cambios se implementan rápido.</p>
+        </div>
+        <div class="dif-card glass-card">
+          <div class="dif-icon"><i class="fa-solid fa-bullseye"></i></div>
+          <h4>Honestidad técnica total</h4>
+          <p>Te decimos lo que se puede hacer, lo que va a tardar y lo que cuesta. Sin exageraciones.</p>
+        </div>
+      </div>
+
+      <div class="founders-grid">
+
+        <div class="founder-card glass-card">
+          <div class="founder-avatar" data-initials="LP">
+            <img src="assets/img/lara.jpg" alt="Lara Pintos" onerror="this.style.display='none'; this.parentNode.classList.add('avatar-initials')" />
+          </div>
+          <div class="founder-info">
+            <h3>Lara Pintos</h3>
+            <span class="founder-role">Co-fundadora · Desarrollo técnico</span>
+            <p>
+              Desarrolladora de software con foco en la calidad del código y la arquitectura de sistemas.
+              Especializada en construir soluciones escalables que acompañan el crecimiento del negocio.
+            </p>
+            <div class="founder-tags">
+              <span>Software Dev</span>
+              <span>Arquitectura</span>
+              <span>Calidad de código</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="founder-card glass-card">
+          <div class="founder-avatar" data-initials="TF">
+            <img src="assets/img/teo.jpg" alt="Teo Fernández" onerror="this.style.display='none'; this.parentNode.classList.add('avatar-initials')" />
+          </div>
+          <div class="founder-info">
+            <h3>Teo Fernández</h3>
+            <span class="founder-role">Co-fundadora · Desarrollo técnico</span>
+            <p>
+              Especializada en desarrollo de software y construcción de sistemas robustos y escalables.
+              Aporta rigor técnico en cada etapa del proyecto para garantizar entregas confiables.
+            </p>
+            <div class="founder-tags">
+              <span>Software Dev</span>
+              <span>Sistemas Escalables</span>
+              <span>Rigor Técnico</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       TESTIMONIOS — SECCIÓN 7
+  ═══════════════════════════════════════════════ -->
+  <section id="testimonios">
+    <div class="section-inner">
+      <span class="section-eyebrow" style="color: rgba(255,255,255,0.6)">Lo que dicen nuestros clientes</span>
+      <h2 class="section-title" style="color: #fff">La mejor referencia<br />es quien ya trabajó con nosotras</h2>
+
+      <div class="testimonios-grid">
+
+        <div class="testi-card glass-card-dark">
+          <div class="testi-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="testi-quote">
+            "Antes del sistema perdíamos horas cuadrando el inventario. Ahora lo hago en minutos
+            y sé exactamente lo que tengo. No esperaba que sea tan fácil de usar."
+          </p>
+          <div class="testi-author">
+            <div class="testi-avatar">MR</div>
+            <div>
+              <strong>Marcos R.</strong>
+              <span>Propietario · Kiosco Centro</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testi-card glass-card-dark">
+          <div class="testi-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="testi-quote">
+            "Lo que más me sorprendió fue que en todo momento hablé directamente con las que
+            desarrollaban. Ningún intermediario. Entienden el negocio, no solo el código."
+          </p>
+          <div class="testi-author">
+            <div class="testi-avatar">SV</div>
+            <div>
+              <strong>Santiago V.</strong>
+              <span>Gerente · Empresa de Logística</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testi-card glass-card-dark">
+          <div class="testi-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="testi-quote">
+            "Pensé que implementar un sistema iba a ser un caos. Fue todo lo contrario.
+            Nos acompañaron en cada paso y el equipo lo adoptó sin problema."
+          </p>
+          <div class="testi-author">
+            <div class="testi-avatar">CL</div>
+            <div>
+              <strong>Claudia L.</strong>
+              <span>Directora · Gimnasio FitLife</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       CONTACTO — SECCIÓN 8
+  ═══════════════════════════════════════════════ -->
+  <section id="contacto">
+    <div class="contacto-bg-glow"></div>
+    <div class="section-inner contacto-inner">
+
+      <div class="contacto-left">
+        <span class="section-eyebrow">Contacto</span>
+        <h2 class="section-title">
+          Contanos tu proyecto —<br />respondemos en <span class="highlight">48 horas</span>
+        </h2>
+        <p class="section-sub">
+          No hace falta tener todo definido. Alcanza con que tengas un problema claro.
+          Nosotras te ayudamos a pensar la solución.
+        </p>
+        <div class="contacto-info">
+          <div class="ci-row">
+            <i class="fa-solid fa-envelope"></i>
+            <span>awentechargentina@gmail.com</span>
+          </div>
+          <div class="ci-row">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span>WhatsApp disponible al hacer contacto</span>
+          </div>
+          <div class="ci-row">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>Argentina · Trabajo remoto en todo el país</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="contacto-right">
+        <form id="contactForm" class="glass-card contact-form" novalidate>
+          <div class="form-group">
+            <label for="nombre">Nombre y apellido *</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Juan García" required />
+            <span class="field-error" id="err-nombre"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="empresa">Empresa / Negocio</label>
+            <input type="text" id="empresa" name="empresa" placeholder="Mi empresa SA" />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" placeholder="juan@miempresa.com" required />
+            <span class="field-error" id="err-email"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="telefono">Teléfono / WhatsApp</label>
+            <input type="tel" id="telefono" name="telefono" placeholder="+54 9 11 1234-5678" />
+          </div>
+
+          <div class="form-group">
+            <label for="necesidad">¿Qué necesitás? *</label>
+            <select id="necesidad" name="necesidad" required>
+              <option value="" disabled selected>Seleccioná una opción</option>
+              <option value="desarrollo_medida">Desarrollo de software a medida</option>
+              <option value="sistema_existente">Adaptar uno de sus sistemas existentes</option>
+              <option value="automatizacion">Automatización de procesos</option>
+              <option value="agente_ia">Agente de Inteligencia Artificial</option>
+              <option value="consultoria">Consultoría técnica</option>
+              <option value="no_se">No lo tengo claro aún</option>
+            </select>
+            <span class="field-error" id="err-necesidad"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="mensaje">Contanos tu proyecto *</label>
+            <textarea id="mensaje" name="mensaje" rows="4" placeholder="Describí el problema que querés resolver o lo que querés construir..." required></textarea>
+            <span class="field-error" id="err-mensaje"></span>
+          </div>
+
+          <!-- reCAPTCHA v2 -->
+          <div class="form-group recaptcha-wrap">
+            <div class="g-recaptcha" data-sitekey="TU_SITE_KEY_AQUI"></div>
+            <span class="field-error" id="err-recaptcha"></span>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
+            <span id="btnText">Enviar mensaje</span>
+            <span id="btnLoader" style="display:none"><i class="fa-solid fa-spinner fa-spin"></i> Enviando...</span>
+          </button>
+        </form>
+
+        <!-- Success state -->
+        <div id="formSuccess" class="form-success glass-card" style="display:none">
+          <div class="success-icon"><i class="fa-solid fa-circle-check"></i></div>
+          <h3>¡Mensaje recibido!</h3>
+          <p>Te respondemos en menos de 48 horas. Si es urgente, también podés escribirnos directo al email.</p>
+          <a href="mailto:awentechargentina@gmail.com" class="btn btn-outline">Enviar email directo</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════════ -->
+  <footer id="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="Logo AwenTech - Sin fondo.png" alt="Awen Tech" />
+        <p>Código con Propósito.<br />Consultora de software · Argentina · 2026</p>
+      </div>
+      <div class="footer-links">
+        <a href="#servicios">Servicios</a>
+        <a href="#proceso">Proceso</a>
+        <a href="#casos">Portfolio</a>
+        <a href="#nosotros">Nosotras</a>
+        <a href="#contacto">Contacto</a>
+      </div>
+      <div class="footer-social">
+        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="mailto:awentechargentina@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Awen Tech Software Solutions. Todos los derechos reservados.</span>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
