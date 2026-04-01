@@ -9,7 +9,9 @@ header('Content-Type: application/json; charset=UTF-8');
 header('X-Content-Type-Options: nosniff');
 
 // ── Configuración ─────────────────────────────────────────
-define('RECAPTCHA_SECRET', '6Ldr9Z4sAAAAAEXrT8hesJHQuUDn_nD7s1502J1A');   // <-- reemplazá
+
+define('RECAPTCHA_SECRET', '6Ldil6AsAAAAAN_gGy0tjCGco2F_zoWFWrXjl6Ji');   // <-- reemplazá
+
 define('SMTP_HOST',   'smtp.gmail.com');
 define('SMTP_USER',   'awentechargentina@gmail.com');
 define('SMTP_PASS',   'Pintorgermanico88.');       // <-- App Password de Google
