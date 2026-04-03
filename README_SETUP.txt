@@ -93,7 +93,7 @@ En index.html, al final (sección footer), reemplazar los # con las URLs reales:
 
 CHECKLIST FINAL ANTES DE PUBLICAR:
   [SI] Site Key de reCAPTCHA en index.html
-  [ ] Secret Key de reCAPTCHA en php/send_mail.php
+  [SI] Secret Key de reCAPTCHA en php/send_mail.php
   [ ] App Password de Gmail en php/send_mail.php
   [ ] Fotos de Lara y Teo subidas a assets/img/
   [SI] Links de redes sociales actualizados 
