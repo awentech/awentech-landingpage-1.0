@@ -2,7 +2,7 @@
   AWEN TECH — INSTRUCCIONES DE CONFIGURACIÓN
 ═══════════════════════════════════════════════════════════
 
-PASO 1 — reCAPTCHA v2
+PASO 1 — reCAPTCHA v2   
 ─────────────────────
 1. Ir a: https://www.google.com/recaptcha/admin/create
 2. Tipo: reCAPTCHA v2 · "No soy un robot"
@@ -92,12 +92,12 @@ En index.html, al final (sección footer), reemplazar los # con las URLs reales:
 
 
 CHECKLIST FINAL ANTES DE PUBLICAR:
-  [ ] Site Key de reCAPTCHA en index.html
+  [SI] Site Key de reCAPTCHA en index.html
   [ ] Secret Key de reCAPTCHA en php/send_mail.php
   [ ] App Password de Gmail en php/send_mail.php
   [ ] Fotos de Lara y Teo subidas a assets/img/
-  [ ] Links de redes sociales actualizados
-  [ ] Dominio configurado en reCAPTCHA admin
+  [SI] Links de redes sociales actualizados (menos el gmail)
+  [SI] Dominio configurado en reCAPTCHA admin
   [ ] Probar formulario en producción
 
 ═══════════════════════════════════════════════════════════
