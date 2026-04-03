@@ -96,7 +96,7 @@ CHECKLIST FINAL ANTES DE PUBLICAR:
   [ ] Secret Key de reCAPTCHA en php/send_mail.php
   [ ] App Password de Gmail en php/send_mail.php
   [ ] Fotos de Lara y Teo subidas a assets/img/
-  [SI] Links de redes sociales actualizados (menos el gmail)
+  [SI] Links de redes sociales actualizados 
   [SI] Dominio configurado en reCAPTCHA admin
   [ ] Probar formulario en producción
 
