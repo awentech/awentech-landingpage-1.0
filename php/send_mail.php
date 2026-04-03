@@ -1,23 +1,28 @@
 <?php
 /**
  * Awen Tech — Formulario de contacto
- * Requiere: PHPMailer (ver instrucciones en README_SETUP.txt)
- * Configurar: RECAPTCHA_SECRET_KEY, SMTP_USER, SMTP_PASS
  */
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+require __DIR__ . '/vendedor/PHPMailer/src/Exception.php';
+require __DIR__ . '/vendedor/PHPMailer/src/PHPMailer.php';
+require __DIR__ . '/vendedor/PHPMailer/src/SMTP.php';
 
 header('Content-Type: application/json; charset=UTF-8');
 header('X-Content-Type-Options: nosniff');
 
 // ── Configuración ─────────────────────────────────────────
 
-define('RECAPTCHA_SECRET', '6Ldil6AsAAAAAN_gGy0tjCGco2F_zoWFWrXjl6Ji');   // <-- reemplazá
+define('RECAPTCHA_SECRET', '6Ldil6AsAAAAAN_gGy0tjCGco2F_zoWFWrXjl6Ji');
 
-define('SMTP_HOST',   'smtp.gmail.com');
-define('SMTP_USER',   'awentechargentina@gmail.com');
-define('SMTP_PASS',   'Pintorgermanico88..');       // <-- App Password de Google
+define('SMTP_HOST',   'smtp.zoho.com');
+define('SMTP_USER',   '54-1122343373502@zohomail.com');
+define('SMTP_PASS',   'EZhkNzV5deNR');
 define('SMTP_PORT',   587);
 define('MAIL_TO',     'awentechargentina@gmail.com');
-define('MAIL_FROM',   'awentechargentina@gmail.com');
+define('MAIL_FROM',   '54-1122343373502@zohomail.com');
 define('MAIL_NAME',   'Awen Tech · Formulario Web');
 // ─────────────────────────────────────────────────────────
 
@@ -178,59 +183,31 @@ $body_html = <<<HTML
 </html>
 HTML;
 
-// ── Intentar enviar con PHPMailer ─────────────────────────
-$phpmailer_path = __DIR__ . '/vendor/phpmailer/src/';
-$use_phpmailer  = is_dir($phpmailer_path);
+// ── Enviar con PHPMailer ──────────────────────────────────
+$mail = new PHPMailer(true);
+try {
+    $mail->isSMTP();
+    $mail->Host       = SMTP_HOST;
+    $mail->SMTPAuth   = true;
+    $mail->Username   = SMTP_USER;
+    $mail->Password   = SMTP_PASS;
+    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+    $mail->Port       = SMTP_PORT;
+    $mail->CharSet    = 'UTF-8';
 
-if ($use_phpmailer) {
-    require $phpmailer_path . 'Exception.php';
-    require $phpmailer_path . 'PHPMailer.php';
-    require $phpmailer_path . 'SMTP.php';
+    $mail->setFrom(MAIL_FROM, MAIL_NAME);
+    $mail->addAddress(MAIL_TO, 'Awen Tech');
+    $mail->addReplyTo($email, $nombre);
 
-    use PHPMailer\PHPMailer\PHPMailer;
-    use PHPMailer\PHPMailer\Exception;
+    $mail->isHTML(true);
+    $mail->Subject = $subject;
+    $mail->Body    = $body_html;
+    $mail->AltBody = "Nuevo contacto: {$nombre} | {$email} | {$necesidad_label}\n\n{$mensaje}";
 
-    $mail = new PHPMailer(true);
-    try {
-        $mail->isSMTP();
-        $mail->Host       = SMTP_HOST;
-        $mail->SMTPAuth   = true;
-        $mail->Username   = SMTP_USER;
-        $mail->Password   = SMTP_PASS;
-        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-        $mail->Port       = SMTP_PORT;
-        $mail->CharSet    = 'UTF-8';
-
-        $mail->setFrom(MAIL_FROM, MAIL_NAME);
-        $mail->addAddress(MAIL_TO, 'Awen Tech');
-        $mail->addReplyTo($email, $nombre);
-
-        $mail->isHTML(true);
-        $mail->Subject = $subject;
-        $mail->Body    = $body_html;
-        $mail->AltBody = "Nuevo contacto: {$nombre} | {$email} | {$necesidad_label}\n\n{$mensaje}";
-
-        $mail->send();
-        $_SESSION['last_submit'] = $now;
-        echo json_encode(['success' => true]);
-    } catch (Exception $e) {
-        error_log('PHPMailer error: ' . $mail->ErrorInfo);
-        echo json_encode(['success' => false, 'message' => 'Error al enviar el mensaje. Por favor escribinos directamente a awentechargentina@gmail.com']);
-    }
-
-} else {
-    // Fallback: mail() nativo de PHP (funciona en Hostinger sin config extra)
-    $headers  = "MIME-Version: 1.0\r\n";
-    $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
-    $headers .= "From: " . MAIL_NAME . " <" . MAIL_FROM . ">\r\n";
-    $headers .= "Reply-To: {$nombre} <{$email}>\r\n";
-    $headers .= "X-Mailer: PHP/" . phpversion() . "\r\n";
-
-    $sent = mail(MAIL_TO, $subject, $body_html, $headers);
-    if ($sent) {
-        $_SESSION['last_submit'] = $now;
-        echo json_encode(['success' => true]);
-    } else {
-        echo json_encode(['success' => false, 'message' => 'Error al enviar. Por favor escribinos directamente a awentechargentina@gmail.com']);
-    }
+    $mail->send();
+    $_SESSION['last_submit'] = $now;
+    echo json_encode(['success' => true]);
+} catch (Exception $e) {
+    error_log('PHPMailer error: ' . $mail->ErrorInfo);
+    echo json_encode(['success' => false, 'message' => 'Error al enviar el mensaje: ' . $mail->ErrorInfo]);
 }
