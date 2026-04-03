@@ -14,7 +14,7 @@ define('RECAPTCHA_SECRET', '6Ldil6AsAAAAAN_gGy0tjCGco2F_zoWFWrXjl6Ji');   // <--
 
 define('SMTP_HOST',   'smtp.gmail.com');
 define('SMTP_USER',   'awentechargentina@gmail.com');
-define('SMTP_PASS',   'Pintorgermanico88.');       // <-- App Password de Google
+define('SMTP_PASS',   'Pintorgermanico88..');       // <-- App Password de Google
 define('SMTP_PORT',   587);
 define('MAIL_TO',     'awentechargentina@gmail.com');
 define('MAIL_FROM',   'awentechargentina@gmail.com');
